@@ -29,12 +29,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
     }
     
     func createUrl() -> String {
-       
-        let accessUserToken =  UserDefaults.standard.string(forKey: "AccessToken")
-               let param: [String: Any] = [
-                   "token":accessUserToken ?? ""
-               ]
-      
+        
         var url = ""
         if let refid = refid {
             url = Server.shared.PartnerOrderDetails + "/\(refid)"
@@ -51,7 +46,6 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
             case let .success(response):
                 if let checkout = response.data {
                     self?.orderDetailsModel = checkout
-//                    print(self?.orderDetailsModel)
                     self?.orderCheckoutTableview.reloadData()
                 }
                 
@@ -95,7 +89,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "AllTaxesTableViewCell") as? AllTaxesTableViewCell
             }
             
-//            cell.configureTaxCell(modal: self.checkoutModel)
+            cell.configureTaxCell(modal: self.orderDetailsModel)
             return cell
             
         }else if indexPath.row == 3{
@@ -105,7 +99,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "SpecialEventDetailsTableViewCell") as? SpecialEventDetailsTableViewCell
             }
             
-//            cell.configureSpecialDetail(modal: self.checkoutModel)
+            cell.configureSpecialDetail(modal: self.orderDetailsModel)
             return cell
             
         }else{

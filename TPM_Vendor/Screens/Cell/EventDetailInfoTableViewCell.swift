@@ -24,8 +24,6 @@ class EventDetailInfoTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     
@@ -37,30 +35,8 @@ class EventDetailInfoTableViewCell: UITableViewCell {
         addressTitleLbl.text = "Address"
         venueLabel.text = orderModal?.address
         dateAndTimeTitleLbl.text = "Date and Time."
-        let urlString = orderModal?.image ?? ""
-        
-//        GlobalFunction.shared.downloadImage(imageView: eventImageView, urlStr: urlString )
-
-
-
+        let url = URL(string: orderModal?.image ?? "")
+        eventImageView.kf.setImage(with: url, placeholder: UIImage(named: "applogo_1024"))
     }
-    
-    
-//    func configureEventDetailCheckoutCell(data:Dictionary<String,AnyObject>?){
-//        let dict = data?["data"] as? Dictionary<String,AnyObject> ?? [:]
-//        eventTitleLabel.text = dict["title"] as? String ?? ""
-//        dateDurationLabel.text = dict["date"] as? String ?? ""
-//           dateAndTimeLabel.text = ""
-//           addressTitleLbl.text = "Address"
-//        venueLabel.text = dict["address"] as? String ?? ""
-//           dateAndTimeTitleLbl.text = "Date and Time."
-//        let urlString = dict["image"] as? String ?? ""
-//          
-////           GlobalFunction.shared.downloadImage(imageView: eventImageView, urlStr: urlString )
-//         
-//          
-//           
-//       }
-//    
     
 }

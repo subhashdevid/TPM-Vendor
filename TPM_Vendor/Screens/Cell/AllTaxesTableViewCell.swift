@@ -26,7 +26,7 @@ class AllTaxesTableViewCell: UITableViewCell {
     
     
     func configureTaxCell(modal:OrderDetailsModel?) -> Void {
-        packageTotalTitle.text = "Platform + Tax"
+        packageTotalTitle.text = "Platform Fee + Taxes"
         totalAmountLbl.text = "\(modal?.amount ?? 0)"
         taxedAmountLbl.text = "\(modal?.taxes ?? 0)"
         
