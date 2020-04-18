@@ -22,6 +22,14 @@ class CustomTableViewCell: UITableViewCell {
 
     
     
+    @IBOutlet weak var refLbl: UILabel!
+    @IBOutlet weak var totalLbl: UILabel!
+    @IBOutlet weak var statusLbl: UILabel!
+    @IBOutlet weak var actionLbl: UILabel!
+    @IBOutlet weak var viewOrderBtn: UIButton!
+
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

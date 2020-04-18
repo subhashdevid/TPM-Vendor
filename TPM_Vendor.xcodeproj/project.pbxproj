@@ -33,6 +33,7 @@
 		BF21F388244B44350024EAB6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F383244B44340024EAB6 /* Server.swift */; };
 		BF21F38B244B448F0024EAB6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38A244B448F0024EAB6 /* Model.swift */; };
 		BF21F38D244B4EE90024EAB6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */; };
+		BF3F6A98244B668A00826DD9 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */; };
 		C22CFC905239C4640980FDB3 /* Pods_TPM_Vendor_TPM_VendorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5778996959F18F0DF78426 /* Pods_TPM_Vendor_TPM_VendorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		BF21F383244B44340024EAB6 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		BF21F38A244B448F0024EAB6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		F33C76ECC26A5B884A2EFA0F /* Pods_TPM_VendorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TPM_VendorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -218,6 +220,7 @@
 		BF15B99A244AD8FC00047AA0 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */,
 				BF15B99C244ADA2800047AA0 /* OTPViewController.swift */,
 				BF15B996244AD80600047AA0 /* BaseViewController.swift */,
 				BF15B997244AD80600047AA0 /* LoginViewController.swift */,
@@ -514,6 +517,7 @@
 				BF15B999244AD80600047AA0 /* LoginViewController.swift in Sources */,
 				BF15B966244ACFF600047AA0 /* AppDelegate.swift in Sources */,
 				BF15B9A9244ADAC600047AA0 /* UITableView+Ext.swift in Sources */,
+				BF3F6A98244B668A00826DD9 /* OrderDetailsViewController.swift in Sources */,
 				BF21F387244B44350024EAB6 /* Loader.swift in Sources */,
 				BF21F38B244B448F0024EAB6 /* Model.swift in Sources */,
 				BF15B9AA244ADAC600047AA0 /* UIViewExtension.swift in Sources */,

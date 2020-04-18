@@ -40,9 +40,13 @@ class Server: NSObject, Codable { // checkpoint
     var LoginUrl = "\(mainUrl)login"
     var VerifyUrl = "\(mainUrl)verify-otp"
     var PartnerProfileUrl = "\(mainUrl)partner-profile"
-    
-    
+    var MyOrderList = "\(mainUrl)my-orders"
 
+    var PartnerOrderDetails = "\(mainUrl)partner-order-details"
+
+
+    
+    
     
     //MARK:- serverTimeInterval
     var serverTimeInterval: TimeInterval = Date().timeIntervalSince1970

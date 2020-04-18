@@ -46,3 +46,12 @@ struct ProfileDetails: Codable {
 
 
 }
+
+
+struct OrderListModel: Codable {
+    var refid: String?
+    var status: String?
+    var total: Int?
+    var id: Int?
+
+}

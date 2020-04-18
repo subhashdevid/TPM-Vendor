@@ -194,7 +194,13 @@ class NetworkManager {
         getRequest(url: Server.shared.PartnerProfileUrl , parameters: parameters, handler: handler)
     }
     
+    class func getMyOrderList(parameters: [String: Any]?, handler: (APICompletion<[OrderListModel]>)? = nil) {
+           getRequest(url: Server.shared.MyOrderList , parameters: parameters, handler: handler)
+       }
     
+    class func getPartnerOrderDetails(parameters: [String: Any]?, handler: (APICompletion<[OrderListModel]>)? = nil) {
+              getRequest(url: Server.shared.PartnerOrderDetails , parameters: parameters, handler: handler)
+          }
     
     
     
