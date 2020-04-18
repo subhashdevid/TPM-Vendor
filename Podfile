@@ -6,9 +6,18 @@ target 'TPM_Vendor' do
   use_frameworks!
 
   # Pods for TPM_Vendor
+  pod 'SVProgressHUD'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'IQKeyboardManagerSwift'
+  pod "SwiftPhoneNumberFormatter"
+  pod 'DPOTPView'
+  pod 'Alamofire', '~> 4.9.1'
+  pod 'MBProgressHUD','~> 1.1.0'
+  pod 'EzPopup'
+  pod 'UITextView+Placeholder'
 
-	pod 'Alamofire'
-
+  
+  
   target 'TPM_VendorTests' do
     inherit! :search_paths
     # Pods for testing
