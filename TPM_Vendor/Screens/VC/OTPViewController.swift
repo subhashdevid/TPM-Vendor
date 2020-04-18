@@ -71,6 +71,7 @@ class OTPViewController: BaseViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         appDelegate.showHomeScreen()
+        
 //           NetworkManager.verifyOTP(parameters: param) {[weak self] result in
 //               Loader.dismissHud()
 //               switch result {

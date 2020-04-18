@@ -43,6 +43,7 @@ class LoginViewController: BaseViewController {
     }
    
     func validateUser()  {
+        self.view.endEditing(true)
         self.rawMobileNumber = self.mobileNumber
         
         self.mobileNumber = self.mobileNumber.replacingOccurrences(of: "-", with: "")
@@ -65,7 +66,7 @@ class LoginViewController: BaseViewController {
             "mobile": phone ?? ""
         ]
         
-        Loader.showHud()
+//        Loader.showHud()
         self.redirectToOTP()
 //        NetworkManager.LoginUser(parameters: param) {[weak self] result in
 //            Loader.dismissHud()

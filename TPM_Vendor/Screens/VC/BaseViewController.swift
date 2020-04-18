@@ -15,15 +15,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.init(named: "ViewBGColor")
+        view.backgroundColor = .white
     }
     
-    
-    func setUpTabBarAndNavigationTitle(tabBarHidden : Bool, navigationTitle : String?) {
-        self.tabBarController?.tabBar.isHidden = tabBarHidden
+    func setUpNavigationBarWithTitle (isbarHidden : Bool, navigationTitle : String? ) {
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationItem.title = navigationTitle
-        self.view.backgroundColor = .white
+        self.navigationController?.navigationBar.isHidden  = isbarHidden
         self.navigationController?.navigationBar.tintColor = .black
     }
     

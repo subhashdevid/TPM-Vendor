@@ -43,9 +43,10 @@ extension AppDelegate {
 
     func showHomeScreen() {
         let vc = VendorDashboardViewController.instantiate(appStoryboard: .main)
-        self.window?.rootViewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-   
+  
     }
     
     

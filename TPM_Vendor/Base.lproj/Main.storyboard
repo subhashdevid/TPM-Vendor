@@ -248,6 +248,22 @@ TG9naW4DA
             </objects>
             <point key="canvasLocation" x="-279" y="1116"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QZr-pw-Hua">
+            <objects>
+                <navigationController id="rfd-jU-UhO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dBD-kn-8Rh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fpI-uC-BIe" kind="relationship" relationship="rootViewController" id="7Lt-MD-62f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN5-8v-H7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="127"/>
+        </scene>
         <!--Vendor Dashboard View Controller-->
         <scene sceneID="DBa-nT-4fV">
             <objects>
@@ -258,10 +274,11 @@ TG9naW4DA
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7kf-Zp-fZd"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9kG-zv-Ktx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6P-gx-QOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="558"/>
+            <point key="canvasLocation" x="1607" y="121"/>
         </scene>
     </scenes>
     <resources>
