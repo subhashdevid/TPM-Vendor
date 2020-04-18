@@ -198,11 +198,10 @@ class NetworkManager {
            getRequest(url: Server.shared.MyOrderList , parameters: parameters, handler: handler)
        }
     
-    class func getPartnerOrderDetails(parameters: [String: Any]?, handler: (APICompletion<[OrderListModel]>)? = nil) {
-              getRequest(url: Server.shared.PartnerOrderDetails , parameters: parameters, handler: handler)
+    
+    class func getOrderDetails(url: String, parameters: [String: Any]?, handler: (APICompletion<OrderDetailsModel>)? = nil) {
+              getRequest(url: url, parameters: parameters, handler: handler)
           }
-    
-    
     
     //MARK:- POST Request
     

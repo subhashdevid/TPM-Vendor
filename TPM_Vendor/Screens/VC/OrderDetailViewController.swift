@@ -1,62 +1,4 @@
 //
-//  OrderDetailsViewController.swift
-//  TPM_Vendor
-//
-//  Created by SUBHASH KUMAR on 18/04/20.
-//  Copyright © 2020 SHIKHA. All rights reserved.
-//
-/*
-import UIKit
-
-class OrderDetailsViewController: BaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-          setUpNavigationBarWithTitle(isbarHidden: true, navigationTitle: "")
-          self.view.backgroundColor =  UIColor.init(red: 226/255, green: 188/255, blue: 123/255, alpha: 1.0)
-
-
-          self.fetchOrderDetails()
-
-      }
-      
-
-       //MARK:- Order Details API Call
-    
-    func fetchOrderDetails() {
-        let accessUserToken =  UserDefaults.standard.string(forKey: "AccessToken")
-        let param: [String: Any] = [
-            "token":accessUserToken ?? ""
-        ]
-        Loader.showHud()
-        NetworkManager.getMyOrderList(parameters: param) {[weak self] result in
-            Loader.dismissHud()
-            switch result {
-            case let .success(response):
-                if let userProfile = response.data {
-                   // self?.orderModel = userProfile
-                   // self?.tblView.reloadData()
-                }
-                
-            case .failure: break
-            }
-        }
-    }
-    
-    
-    
-
-}
-
-
-
-//
 //  OrderDetailViewController.swift
 //  PartyMantra
 //
@@ -67,13 +9,9 @@ class OrderDetailsViewController: BaseViewController {
 import UIKit
 
 class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource {
-   
-    
-
-    var orderId : String?
-    //var orderModal : OrderDetaillistModel?
-    //var checkoutModel : OrderCheckoutModel?
+           
     var refid: String?
+    var orderDetailsModel : OrderDetailsModel?
     
     @IBOutlet weak var orderCheckoutTableview: UITableView!
     override func viewDidLoad() {
@@ -86,7 +24,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // self.setUpTabBarAndNavigationTitle(tabBarHidden: true, navigationTitle: "More Details")
+        self.setUpNavigationBarWithTitle(isbarHidden: false, navigationTitle: "Order Details")
         self.fetchOrderDetails()
     }
     
@@ -99,25 +37,21 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
       
         var url = ""
         if let refid = refid {
-           // url = Server.shared.orderDetailUrl + "/\(refid)"
+            url = Server.shared.PartnerOrderDetails + "/\(refid)"
         }
         return url
     }
     
     func fetchOrderDetails() {
         Loader.showHud()
-        
-        let param: [String: Any] = [
-            
-            :]
-        //NetworkManager.getOrderDetails(url: createUrl(),parameters: param) {[weak self] result in
+        let param: [String: Any] = [:]
+        NetworkManager.getOrderDetails(url: createUrl(),parameters: param) {[weak self] result in
             Loader.dismissHud()
             switch result {
             case let .success(response):
                 if let checkout = response.data {
-                    self?.checkoutModel = checkout
-                    print(self?.checkoutModel!)
-
+                    self?.orderDetailsModel = checkout
+//                    print(self?.orderDetailsModel)
                     self?.orderCheckoutTableview.reloadData()
                 }
                 
@@ -125,6 +59,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
             }
         }
     }
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,16 +74,18 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
                 orderCheckoutTableview.register(UINib(nibName: "EventDetailInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EventDetailInfoTableViewCell")
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell") as? EventDetailInfoTableViewCell
             }
-            cell.configureCheckoutCell(checkOutModal: self.checkoutModel,orderModal:orderModal)
+
+            cell.configureCheckoutCell(orderModal: self.orderDetailsModel)
             return cell
             
-        }else if indexPath.row == 1{
+        }
+        else if indexPath.row == 1{
             var cell: detailPackageTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "detailPackageTableViewCell") as? detailPackageTableViewCell
             if cell == nil {
                 orderCheckoutTableview.register(UINib(nibName: "detailPackageTableViewCell", bundle: nil), forCellReuseIdentifier: "detailPackageTableViewCell")
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "detailPackageTableViewCell") as? detailPackageTableViewCell
             }
-            cell.configureCheckoutListTableView(dataModal : self.checkoutModel)
+//            cell.configureCheckoutListTableView(dataModal : self.OrderDetailsModel)
             return cell
             
         }else if indexPath.row == 2{
@@ -158,7 +95,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "AllTaxesTableViewCell") as? AllTaxesTableViewCell
             }
             
-            cell.configureTaxCell(modal: self.checkoutModel)
+//            cell.configureTaxCell(modal: self.checkoutModel)
             return cell
             
         }else if indexPath.row == 3{
@@ -168,7 +105,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
                 cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "SpecialEventDetailsTableViewCell") as? SpecialEventDetailsTableViewCell
             }
             
-            cell.configureSpecialDetail(modal: self.checkoutModel)
+//            cell.configureSpecialDetail(modal: self.checkoutModel)
             return cell
             
         }else{
@@ -180,13 +117,13 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
             
            
             
-            let qrCode = self.checkoutModel?.qrcode ?? ""
-            let url : URL = NSURL(string: qrCode)! as URL
-            
-            
-            // this downloads the image asynchronously if it's not cached yet
-            cell.qrCodeImage.kf.setImage(with: url, placeholder: UIImage(named: "applogo_1024"))
-            
+//            let qrCode = self.checkoutModel?.qrcode ?? ""
+//            let url : URL = NSURL(string: qrCode)! as URL
+//
+//
+//            // this downloads the image asynchronously if it's not cached yet
+//            cell.qrCodeImage.kf.setImage(with: url, placeholder: UIImage(named: "applogo_1024"))
+//
             
             return cell
         }
@@ -195,20 +132,17 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 1{
-             
-            let numberOfCell = self.checkoutModel?.packages?.count ?? 0
-           return  (CGFloat(37*numberOfCell+20))
-        }else{
+//        if indexPath.row == 1{
+//
+//            let numberOfCell = self.checkoutModel?.packages?.count ?? 0
+//           return  (CGFloat(37*numberOfCell+20))
+//        }else{
             return UITableView.automaticDimension
-        }
+//        }
     }
    
     
 }
- */
-
-
 
 
 

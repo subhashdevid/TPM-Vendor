@@ -55,3 +55,78 @@ struct OrderListModel: Codable {
     var id: Int?
 
 }
+
+
+
+struct OrderDetailsModel: Codable {
+    var orderid: String?
+    var title: String?
+    var image: String?
+    var address: String?
+    var date: String?
+    var name: String?
+    var mobile: String?
+    var email: String?
+    var ratio: String?
+    var totalpass: Int?
+    var amount: Int?
+    var subtotal: Int?
+    var taxes: Int?
+    var qrcode: String?
+    var actions : OrderAction?
+    //    var packages : [OrderPackages]?
+
+
+}
+
+struct OrderAction: Codable {
+    var mark: String?
+    var confirm: String?
+    var decline: String?
+
+}
+
+
+//struct OrderPackages: Codable {
+//    var mark: String?
+//    var confirm: String?
+//    var decline: String?
+//
+//}
+
+
+
+
+
+
+/*
+ 
+ 
+ {
+     "status": "success",
+     "data": {
+         "orderid": "20200208100841",
+         "title": "Hotel Samrat(billpay)",
+         "image": "http://partymantra.appoffice.xyz/uploads/partners/eventicon1.jpeg",
+         "address": "n 65, sector 12",
+         "packages": [],
+         "date": "Sat,08 Feb 2020-10:08AM",
+         "totalpass": 0,
+         "name": null,
+         "mobile": null,
+         "email": null,
+         "ratio": "Men: 0 Women: 0 Couple:0",
+         "amount": 852,
+         "subtotal": 852,
+         "taxes": 0,
+         "qrcode": "http://partymantra.appoffice.xyz/api/get-qr/37",
+         "actions": {
+             "mark": "no",
+             "confirm": "no",
+             "decline": "no"
+         }
+     }
+ }
+ 
+ 
+ **/

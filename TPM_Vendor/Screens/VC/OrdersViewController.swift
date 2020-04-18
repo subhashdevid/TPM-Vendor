@@ -59,10 +59,9 @@ class OrdersViewController: BaseViewController {
     
     @objc func didTapOnViewOrderBtn( sender : UIButton ) {
         let model = self.orderModel?[sender.tag]
-
-        
-        
-        
+        let vc = OrderDetailViewController.instantiate(appStoryboard: .main) as OrderDetailViewController
+        vc.refid = model?.refid ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     

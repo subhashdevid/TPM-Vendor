@@ -744,6 +744,40 @@ TG9naW4DA
             </objects>
             <point key="canvasLocation" x="2111.594202898551" y="977.67857142857133"/>
         </scene>
+        <!--Order Detail View Controller-->
+        <scene sceneID="GGP-DJ-pTb">
+            <objects>
+                <viewController storyboardIdentifier="OrderDetailViewController" id="Qot-Aa-raz" customClass="OrderDetailViewController" customModule="PartyMantra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DRB-uN-ajo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hoL-VM-QBf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qot-Aa-raz" id="bxB-zK-L8E"/>
+                                    <outlet property="delegate" destination="Qot-Aa-raz" id="Hhy-UB-hk6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hEL-xm-cgV" firstAttribute="trailing" secondItem="hoL-VM-QBf" secondAttribute="trailing" id="2fH-eq-eoX"/>
+                            <constraint firstItem="hoL-VM-QBf" firstAttribute="leading" secondItem="hEL-xm-cgV" secondAttribute="leading" id="IXt-gl-rgZ"/>
+                            <constraint firstItem="hoL-VM-QBf" firstAttribute="top" secondItem="hEL-xm-cgV" secondAttribute="top" id="L8Z-VI-WeN"/>
+                            <constraint firstItem="hEL-xm-cgV" firstAttribute="bottom" secondItem="hoL-VM-QBf" secondAttribute="bottom" id="NK1-NL-Fzb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hEL-xm-cgV"/>
+                    </view>
+                    <connections>
+                        <outlet property="orderCheckoutTableview" destination="hoL-VM-QBf" id="eof-fk-aqz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Tv-qc-Hgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="1669"/>
+        </scene>
     </scenes>
     <resources>
         <image name="applogo_1024" width="1024" height="1024"/>

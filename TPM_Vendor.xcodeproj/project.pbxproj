@@ -33,7 +33,19 @@
 		BF21F388244B44350024EAB6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F383244B44340024EAB6 /* Server.swift */; };
 		BF21F38B244B448F0024EAB6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38A244B448F0024EAB6 /* Model.swift */; };
 		BF21F38D244B4EE90024EAB6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */; };
-		BF3F6A98244B668A00826DD9 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */; };
+		BFD8CAF9244B6BEC0035120A /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CAF8244B6BEB0035120A /* OrderDetailViewController.swift */; };
+		BFD8CB05244B6F020035120A /* SpecialEventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CAFB244B6F010035120A /* SpecialEventDetailsTableViewCell.swift */; };
+		BFD8CB06244B6F020035120A /* SpecialEventDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CAFC244B6F010035120A /* SpecialEventDetailsTableViewCell.xib */; };
+		BFD8CB07244B6F020035120A /* AllTaxesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CAFD244B6F010035120A /* AllTaxesTableViewCell.xib */; };
+		BFD8CB08244B6F020035120A /* QRCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CAFE244B6F010035120A /* QRCodeTableViewCell.swift */; };
+		BFD8CB09244B6F020035120A /* EventDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CAFF244B6F010035120A /* EventDetailInfoTableViewCell.swift */; };
+		BFD8CB0A244B6F020035120A /* detailPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CB00244B6F020035120A /* detailPackageTableViewCell.swift */; };
+		BFD8CB0B244B6F020035120A /* detailPackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CB01244B6F020035120A /* detailPackageTableViewCell.xib */; };
+		BFD8CB0C244B6F020035120A /* AllTaxesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CB02244B6F020035120A /* AllTaxesTableViewCell.swift */; };
+		BFD8CB0D244B6F020035120A /* EventDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CB03244B6F020035120A /* EventDetailInfoTableViewCell.xib */; };
+		BFD8CB0E244B6F020035120A /* QRCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CB04244B6F020035120A /* QRCodeTableViewCell.xib */; };
+		BFD8CB15244B701F0035120A /* selectedPackageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8CB13244B701F0035120A /* selectedPackageTableViewCell.swift */; };
+		BFD8CB16244B701F0035120A /* selectedPackageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD8CB14244B701F0035120A /* selectedPackageTableViewCell.xib */; };
 		C22CFC905239C4640980FDB3 /* Pods_TPM_Vendor_TPM_VendorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5778996959F18F0DF78426 /* Pods_TPM_Vendor_TPM_VendorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +105,19 @@
 		BF21F383244B44340024EAB6 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		BF21F38A244B448F0024EAB6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
-		BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		BFD8CAF8244B6BEB0035120A /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		BFD8CAFB244B6F010035120A /* SpecialEventDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialEventDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CAFC244B6F010035120A /* SpecialEventDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialEventDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		BFD8CAFD244B6F010035120A /* AllTaxesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllTaxesTableViewCell.xib; sourceTree = "<group>"; };
+		BFD8CAFE244B6F010035120A /* QRCodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CAFF244B6F010035120A /* EventDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CB00244B6F020035120A /* detailPackageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailPackageTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CB01244B6F020035120A /* detailPackageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailPackageTableViewCell.xib; sourceTree = "<group>"; };
+		BFD8CB02244B6F020035120A /* AllTaxesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTaxesTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CB03244B6F020035120A /* EventDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
+		BFD8CB04244B6F020035120A /* QRCodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeTableViewCell.xib; sourceTree = "<group>"; };
+		BFD8CB13244B701F0035120A /* selectedPackageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectedPackageTableViewCell.swift; sourceTree = "<group>"; };
+		BFD8CB14244B701F0035120A /* selectedPackageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectedPackageTableViewCell.xib; sourceTree = "<group>"; };
 		F33C76ECC26A5B884A2EFA0F /* Pods_TPM_VendorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TPM_VendorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -208,6 +232,7 @@
 		BF15B995244AD80600047AA0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BFD8CAFA244B6F010035120A /* Cell */,
 				BF21F389244B44860024EAB6 /* Model */,
 				BF15B9A1244ADAC600047AA0 /* Extension */,
 				BF15B99E244ADA7F00047AA0 /* Utils */,
@@ -220,7 +245,7 @@
 		BF15B99A244AD8FC00047AA0 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				BF3F6A97244B668A00826DD9 /* OrderDetailsViewController.swift */,
+				BFD8CAF8244B6BEB0035120A /* OrderDetailViewController.swift */,
 				BF15B99C244ADA2800047AA0 /* OTPViewController.swift */,
 				BF15B996244AD80600047AA0 /* BaseViewController.swift */,
 				BF15B997244AD80600047AA0 /* LoginViewController.swift */,
@@ -268,6 +293,25 @@
 				BF21F38A244B448F0024EAB6 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BFD8CAFA244B6F010035120A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BFD8CB13244B701F0035120A /* selectedPackageTableViewCell.swift */,
+				BFD8CB14244B701F0035120A /* selectedPackageTableViewCell.xib */,
+				BFD8CAFB244B6F010035120A /* SpecialEventDetailsTableViewCell.swift */,
+				BFD8CAFC244B6F010035120A /* SpecialEventDetailsTableViewCell.xib */,
+				BFD8CAFD244B6F010035120A /* AllTaxesTableViewCell.xib */,
+				BFD8CAFE244B6F010035120A /* QRCodeTableViewCell.swift */,
+				BFD8CAFF244B6F010035120A /* EventDetailInfoTableViewCell.swift */,
+				BFD8CB00244B6F020035120A /* detailPackageTableViewCell.swift */,
+				BFD8CB01244B6F020035120A /* detailPackageTableViewCell.xib */,
+				BFD8CB02244B6F020035120A /* AllTaxesTableViewCell.swift */,
+				BFD8CB03244B6F020035120A /* EventDetailInfoTableViewCell.xib */,
+				BFD8CB04244B6F020035120A /* QRCodeTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +423,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD8CB07244B6F020035120A /* AllTaxesTableViewCell.xib in Resources */,
+				BFD8CB0E244B6F020035120A /* QRCodeTableViewCell.xib in Resources */,
 				BF15B972244ACFF700047AA0 /* LaunchScreen.storyboard in Resources */,
+				BFD8CB06244B6F020035120A /* SpecialEventDetailsTableViewCell.xib in Resources */,
+				BFD8CB0B244B6F020035120A /* detailPackageTableViewCell.xib in Resources */,
+				BFD8CB16244B701F0035120A /* selectedPackageTableViewCell.xib in Resources */,
+				BFD8CB0D244B6F020035120A /* EventDetailInfoTableViewCell.xib in Resources */,
 				BF15B96F244ACFF700047AA0 /* Assets.xcassets in Resources */,
 				BF15B96D244ACFF600047AA0 /* Main.storyboard in Resources */,
 			);
@@ -516,13 +566,19 @@
 				BF15B9A8244ADAC600047AA0 /* AppExtension.swift in Sources */,
 				BF15B999244AD80600047AA0 /* LoginViewController.swift in Sources */,
 				BF15B966244ACFF600047AA0 /* AppDelegate.swift in Sources */,
+				BFD8CB05244B6F020035120A /* SpecialEventDetailsTableViewCell.swift in Sources */,
 				BF15B9A9244ADAC600047AA0 /* UITableView+Ext.swift in Sources */,
-				BF3F6A98244B668A00826DD9 /* OrderDetailsViewController.swift in Sources */,
+				BFD8CB08244B6F020035120A /* QRCodeTableViewCell.swift in Sources */,
+				BFD8CB0A244B6F020035120A /* detailPackageTableViewCell.swift in Sources */,
+				BFD8CAF9244B6BEC0035120A /* OrderDetailViewController.swift in Sources */,
 				BF21F387244B44350024EAB6 /* Loader.swift in Sources */,
 				BF21F38B244B448F0024EAB6 /* Model.swift in Sources */,
 				BF15B9AA244ADAC600047AA0 /* UIViewExtension.swift in Sources */,
+				BFD8CB15244B701F0035120A /* selectedPackageTableViewCell.swift in Sources */,
 				BF21F38D244B4EE90024EAB6 /* OrdersViewController.swift in Sources */,
 				BF15B9A0244ADA8700047AA0 /* Validation.swift in Sources */,
+				BFD8CB09244B6F020035120A /* EventDetailInfoTableViewCell.swift in Sources */,
+				BFD8CB0C244B6F020035120A /* AllTaxesTableViewCell.swift in Sources */,
 				BF15B998244AD80600047AA0 /* BaseViewController.swift in Sources */,
 				BF21F384244B44350024EAB6 /* UserDetails.swift in Sources */,
 				BF21F385244B44350024EAB6 /* NetworkManager.swift in Sources */,
