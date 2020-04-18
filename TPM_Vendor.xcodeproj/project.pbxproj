@@ -26,6 +26,7 @@
 		BF15B9AB244ADAC600047AA0 /* DPOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9A6244ADAC600047AA0 /* DPOTPView.swift */; };
 		BF15B9AD244ADAEA00047AA0 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9AC244ADAEA00047AA0 /* Loader.swift */; };
 		BF15B9AF244ADBB000047AA0 /* VendorDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9AE244ADBB000047AA0 /* VendorDashboardViewController.swift */; };
+		BF15B9B1244AE6E400047AA0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9B0244AE6E400047AA0 /* CustomTableViewCell.swift */; };
 		C22CFC905239C4640980FDB3 /* Pods_TPM_Vendor_TPM_VendorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5778996959F18F0DF78426 /* Pods_TPM_Vendor_TPM_VendorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		BF15B9A6244ADAC600047AA0 /* DPOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPOTPView.swift; sourceTree = "<group>"; };
 		BF15B9AC244ADAEA00047AA0 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		BF15B9AE244ADBB000047AA0 /* VendorDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDashboardViewController.swift; sourceTree = "<group>"; };
+		BF15B9B0244AE6E400047AA0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F33C76ECC26A5B884A2EFA0F /* Pods_TPM_VendorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TPM_VendorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 				BF15B9A1244ADAC600047AA0 /* Extension */,
 				BF15B99E244ADA7F00047AA0 /* Utils */,
 				BF15B99A244AD8FC00047AA0 /* VC */,
+				BF15B9B0244AE6E400047AA0 /* CustomTableViewCell.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				BF15B9A0244ADA8700047AA0 /* Validation.swift in Sources */,
 				BF15B998244AD80600047AA0 /* BaseViewController.swift in Sources */,
 				BF15B9AF244ADBB000047AA0 /* VendorDashboardViewController.swift in Sources */,
+				BF15B9B1244AE6E400047AA0 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

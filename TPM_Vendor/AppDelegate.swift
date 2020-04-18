@@ -17,13 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application( _ application: UIApplication,didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         
-//                    if let value = UserDefaults.standard.value(forKey: "ISLOGIN") as? String, value == "1" {
-//                       showHomeScreen()
-//                    } else {
-//                        showLoginScreen()
-//                    }
-        showLoginScreen()
-
+        if let value = UserDefaults.standard.value(forKey: "ISLOGIN") as? String, value == "1" {
+            showHomeScreen()
+        } else {
+            showLoginScreen()
+        }
+        
         
         
         UINavigationBar.appearance().barTintColor = .white
