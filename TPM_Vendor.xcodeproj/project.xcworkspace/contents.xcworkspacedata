@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TPM Vendor.xcodeproj">
+      location = "self:/Users/subhashkumar/Documents/GIT_Project/TPM Vendor/TPM_Vendor.xcodeproj">
    </FileRef>
 </Workspace>
