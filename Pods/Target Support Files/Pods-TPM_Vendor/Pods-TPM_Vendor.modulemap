@@ -1,0 +1,6 @@
+framework module Pods_TPM_Vendor {
+  umbrella header "Pods-TPM_Vendor-umbrella.h"
+
+  export *
+  module * { export * }
+}
