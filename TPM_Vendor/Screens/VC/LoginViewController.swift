@@ -66,18 +66,27 @@ class LoginViewController: BaseViewController {
             "mobile": phone ?? ""
         ]
         
-//        Loader.showHud()
-        self.redirectToOTP()
-//        NetworkManager.LoginUser(parameters: param) {[weak self] result in
-//            Loader.dismissHud()
-//            switch result {
-//            case let .success(response):
-//                print(response)
-//                self?.redirectToOTP()
-//            case .failure: break
-//            }
-//
-//        }
+        Loader.showHud()
+        NetworkManager.LoginUser(parameters: param) {[weak self] result in
+            Loader.dismissHud()
+            switch result {
+            case let .success(response):
+                print(response)
+                let responseType = response.type ?? ""
+                if responseType ==  "partner" {
+                    self?.redirectToOTP()
+                }
+                else{
+                    self?.showAlert("You are not a registered partner")
+                }
+            case .failure: break
+            }
+
+        }
+        
+        
+        
+        
     }
     
     func redirectToOTP() {

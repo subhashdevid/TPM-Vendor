@@ -24,9 +24,15 @@
 		BF15B9A9244ADAC600047AA0 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9A4244ADAC600047AA0 /* UITableView+Ext.swift */; };
 		BF15B9AA244ADAC600047AA0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9A5244ADAC600047AA0 /* UIViewExtension.swift */; };
 		BF15B9AB244ADAC600047AA0 /* DPOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9A6244ADAC600047AA0 /* DPOTPView.swift */; };
-		BF15B9AD244ADAEA00047AA0 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9AC244ADAEA00047AA0 /* Loader.swift */; };
 		BF15B9AF244ADBB000047AA0 /* VendorDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9AE244ADBB000047AA0 /* VendorDashboardViewController.swift */; };
 		BF15B9B1244AE6E400047AA0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF15B9B0244AE6E400047AA0 /* CustomTableViewCell.swift */; };
+		BF21F384244B44350024EAB6 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F37F244B44340024EAB6 /* UserDetails.swift */; };
+		BF21F385244B44350024EAB6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F380244B44340024EAB6 /* NetworkManager.swift */; };
+		BF21F386244B44350024EAB6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F381244B44340024EAB6 /* Network.swift */; };
+		BF21F387244B44350024EAB6 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F382244B44340024EAB6 /* Loader.swift */; };
+		BF21F388244B44350024EAB6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F383244B44340024EAB6 /* Server.swift */; };
+		BF21F38B244B448F0024EAB6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38A244B448F0024EAB6 /* Model.swift */; };
+		BF21F38D244B4EE90024EAB6 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */; };
 		C22CFC905239C4640980FDB3 /* Pods_TPM_Vendor_TPM_VendorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5778996959F18F0DF78426 /* Pods_TPM_Vendor_TPM_VendorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,9 +83,15 @@
 		BF15B9A4244ADAC600047AA0 /* UITableView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		BF15B9A5244ADAC600047AA0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		BF15B9A6244ADAC600047AA0 /* DPOTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPOTPView.swift; sourceTree = "<group>"; };
-		BF15B9AC244ADAEA00047AA0 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		BF15B9AE244ADBB000047AA0 /* VendorDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDashboardViewController.swift; sourceTree = "<group>"; };
 		BF15B9B0244AE6E400047AA0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		BF21F37F244B44340024EAB6 /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		BF21F380244B44340024EAB6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BF21F381244B44340024EAB6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BF21F382244B44340024EAB6 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		BF21F383244B44340024EAB6 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		BF21F38A244B448F0024EAB6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		F33C76ECC26A5B884A2EFA0F /* Pods_TPM_VendorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TPM_VendorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +171,7 @@
 		BF15B964244ACFF600047AA0 /* TPM Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				BF21F37E244B44340024EAB6 /* Network */,
 				BF15B995244AD80600047AA0 /* Screens */,
 				BF15B965244ACFF600047AA0 /* AppDelegate.swift */,
 				BF15B96B244ACFF600047AA0 /* Main.storyboard */,
@@ -193,6 +206,7 @@
 		BF15B995244AD80600047AA0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BF21F389244B44860024EAB6 /* Model */,
 				BF15B9A1244ADAC600047AA0 /* Extension */,
 				BF15B99E244ADA7F00047AA0 /* Utils */,
 				BF15B99A244AD8FC00047AA0 /* VC */,
@@ -208,6 +222,7 @@
 				BF15B996244AD80600047AA0 /* BaseViewController.swift */,
 				BF15B997244AD80600047AA0 /* LoginViewController.swift */,
 				BF15B9AE244ADBB000047AA0 /* VendorDashboardViewController.swift */,
+				BF21F38C244B4EE90024EAB6 /* OrdersViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -215,7 +230,6 @@
 		BF15B99E244ADA7F00047AA0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BF15B9AC244ADAEA00047AA0 /* Loader.swift */,
 				BF15B99F244ADA8700047AA0 /* Validation.swift */,
 			);
 			path = Utils;
@@ -231,6 +245,26 @@
 				BF15B9A6244ADAC600047AA0 /* DPOTPView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BF21F37E244B44340024EAB6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BF21F37F244B44340024EAB6 /* UserDetails.swift */,
+				BF21F380244B44340024EAB6 /* NetworkManager.swift */,
+				BF21F381244B44340024EAB6 /* Network.swift */,
+				BF21F382244B44340024EAB6 /* Loader.swift */,
+				BF21F383244B44340024EAB6 /* Server.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BF21F389244B44860024EAB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF21F38A244B448F0024EAB6 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,16 +508,22 @@
 			files = (
 				BF15B9AB244ADAC600047AA0 /* DPOTPView.swift in Sources */,
 				BF15B9A7244ADAC600047AA0 /* UIView+Extensions.swift in Sources */,
+				BF21F386244B44350024EAB6 /* Network.swift in Sources */,
 				BF15B99D244ADA2800047AA0 /* OTPViewController.swift in Sources */,
 				BF15B9A8244ADAC600047AA0 /* AppExtension.swift in Sources */,
 				BF15B999244AD80600047AA0 /* LoginViewController.swift in Sources */,
 				BF15B966244ACFF600047AA0 /* AppDelegate.swift in Sources */,
 				BF15B9A9244ADAC600047AA0 /* UITableView+Ext.swift in Sources */,
+				BF21F387244B44350024EAB6 /* Loader.swift in Sources */,
+				BF21F38B244B448F0024EAB6 /* Model.swift in Sources */,
 				BF15B9AA244ADAC600047AA0 /* UIViewExtension.swift in Sources */,
-				BF15B9AD244ADAEA00047AA0 /* Loader.swift in Sources */,
+				BF21F38D244B4EE90024EAB6 /* OrdersViewController.swift in Sources */,
 				BF15B9A0244ADA8700047AA0 /* Validation.swift in Sources */,
 				BF15B998244AD80600047AA0 /* BaseViewController.swift in Sources */,
+				BF21F384244B44350024EAB6 /* UserDetails.swift in Sources */,
+				BF21F385244B44350024EAB6 /* NetworkManager.swift in Sources */,
 				BF15B9AF244ADBB000047AA0 /* VendorDashboardViewController.swift in Sources */,
+				BF21F388244B44350024EAB6 /* Server.swift in Sources */,
 				BF15B9B1244AE6E400047AA0 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

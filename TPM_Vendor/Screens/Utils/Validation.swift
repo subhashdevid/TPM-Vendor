@@ -11,7 +11,7 @@ import UIKit
 class Validation: NSObject {
     
    static public func validaPhoneNumber(phoneNumber: String) -> Bool {
-       let phoneNumberRegex = "^[6-9]\\d{9}$"
+       let phoneNumberRegex = "^[2-9]\\d{9}$"
        let trimmedString = phoneNumber.trimmingCharacters(in: .whitespaces)
        let validatePhone = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
        let isValidPhone = validatePhone.evaluate(with: trimmedString)

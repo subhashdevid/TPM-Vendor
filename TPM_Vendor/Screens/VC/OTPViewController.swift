@@ -12,20 +12,19 @@ import DPOTPView
 
 class OTPViewController: BaseViewController {
     
-    
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var numberLbl: UILabel!
     @IBOutlet weak var txtDPOTPView: DPOTPView!
     
     var otpString : String = ""
     var mobile : String?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.navigationController?.isNavigationBarHidden = true
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,10 +35,10 @@ class OTPViewController: BaseViewController {
         txtDPOTPView.textEdgeInsets = UIEdgeInsets(top: 0, left: -1, bottom: 0, right: 0)
         txtDPOTPView.editingTextEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         txtDPOTPView.fontTextField = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(25.0))!
-
+        
         
     }
-
+    
     @objc func submitOTPChange(){
         self.verifyOtp()
     }
@@ -58,42 +57,33 @@ class OTPViewController: BaseViewController {
     }
     
     func loginUserWithOtp(otp : String?, mobile: String) {
-       
-           let param: [String: Any] = [
+        
+        let param: [String: Any] = [
             "mobile": mobile ,
-               "otp": otp ?? ""
-           ]
-           
-//           Loader.showHud()
+            "otp": otp ?? ""
+        ]
         
-        
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
-        appDelegate.showHomeScreen()
-        
-//           NetworkManager.verifyOTP(parameters: param) {[weak self] result in
-//               Loader.dismissHud()
-//               switch result {
-//               case let .success(response):
-//                   print(response)
-//                   UserDefaults.standard.set(response.data?.token, forKey: "AccessToken") //setObject
-//                   UserDefaults.standard.synchronize()
-//
-//
-//                   self?.redirectToAddressScreen()
-//               case .failure: break
-//               }
-//           }
-       }
-    
-    
-//    func redirectToAddressScreen()  {
-//
-//        let vc = VendorDashboardViewController.instantiate(appStoryboard: .main) as VendorDashboardViewController
-////        vc.mobile = self.mobile
-//               self.navigationController?.pushViewController(vc, animated: true)
-//    }
+        Loader.showHud()
+        NetworkManager.verifyOTP(parameters: param) {[weak self] result in
+            Loader.dismissHud()
+            switch result {
+            case let .success(response):
+                print(response)
+                UserDefaults.standard.set(response.data?.token ?? "" , forKey: "AccessToken")
+                UserDefaults.standard.set(response.data?.type ?? "", forKey: "loginType") //setObject
+                UserDefaults.standard.synchronize()
+                
+                if response.data?.type ?? "" ==  "partner" {
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.showHomeScreen()                               }
+                else{
+                    self?.showAlert("You are not a registered partner")
+                }
+                
+            case .failure: break
+            }
+        }
+    }
     
 }
 

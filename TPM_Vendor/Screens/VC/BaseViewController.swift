@@ -23,6 +23,7 @@ class BaseViewController: UIViewController {
         self.navigationItem.title = navigationTitle
         self.navigationController?.navigationBar.isHidden  = isbarHidden
         self.navigationController?.navigationBar.tintColor = .black
+//        self.navigationController?.navigationBar.backgroundColor =  UIColor.init(red: 226/255, green: 188/255, blue: 123/255, alpha: 1.0)
     }
     
     
