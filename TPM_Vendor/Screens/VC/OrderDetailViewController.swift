@@ -21,7 +21,7 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
 
-        noBtnNeeded = 3
+        noBtnNeeded = 2
         orderCheckoutTableview.separatorStyle = .none
         self.view.backgroundColor = .white
     }
