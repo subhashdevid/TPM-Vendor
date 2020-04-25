@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "51D1A1A2-57E4-4B17-BB20-14B91451BE63"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0731FFB8-B06B-47CA-B3D2-2594CF56017B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "qrScanningSucceededWithCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F79CC41C-7BBA-4939-9B0B-AAC025071090"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "fetchMarkPassDetails(qrcodeString:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F79CC41C-7BBA-4939-9B0B-AAC025071090 - bada1e90daa1b0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TPM_Vendor.DataResult&lt;TPM_Vendor.OrderDetailsModel&gt;) -&gt; () in TPM_Vendor.VendorDashboardViewController.fetchMarkPassDetails(qrcodeString: Swift.String) -&gt; ()"
+                  moduleName = "TPM_Vendor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edique/Documents/NPM/TPM-Vendor/TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "101">
+               </Location>
+               <Location
+                  uuid = "F79CC41C-7BBA-4939-9B0B-AAC025071090 - bada1e90daa1b0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (TPM_Vendor.DataResult&lt;TPM_Vendor.OrderDetailsModel&gt;) -&gt; () in TPM_Vendor.VendorDashboardViewController.fetchMarkPassDetails(qrcodeString: Swift.String) -&gt; ()"
+                  moduleName = "TPM_Vendor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edique/Documents/NPM/TPM-Vendor/TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

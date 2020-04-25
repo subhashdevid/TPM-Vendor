@@ -13,14 +13,19 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
     var refid: String?
     var orderDetailsModel : OrderDetailsModel?
     
+    var noBtnNeeded = 0
+    
+    
     @IBOutlet weak var orderCheckoutTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
 
+        noBtnNeeded = 3
         orderCheckoutTableview.separatorStyle = .none
         self.view.backgroundColor = .white
     }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -103,27 +108,38 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
             return cell
             
         }else{
-            var cell: QRCodeTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "QRCodeTableViewCell") as? QRCodeTableViewCell
-            if cell == nil {
-                orderCheckoutTableview.register(UINib(nibName: "QRCodeTableViewCell", bundle: nil), forCellReuseIdentifier: "QRCodeTableViewCell")
-                cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "QRCodeTableViewCell") as? QRCodeTableViewCell
+            
+            if noBtnNeeded == 1{
+                var cell: OneBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "OneBtnTableViewCell") as? OneBtnTableViewCell
+                           if cell == nil {
+                               orderCheckoutTableview.register(UINib(nibName: "OneBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "OneBtnTableViewCell")
+                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "OneBtnTableViewCell") as? OneBtnTableViewCell
+                           }
+                
+                
+                return cell
+            }else if noBtnNeeded == 2{
+                var cell: TwoBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "TwoBtnTableViewCell") as? TwoBtnTableViewCell
+                           if cell == nil {
+                               orderCheckoutTableview.register(UINib(nibName: "TwoBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "TwoBtnTableViewCell")
+                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "TwoBtnTableViewCell") as? TwoBtnTableViewCell
+                           }
+                
+                
+                return cell
+            }else{
+                var cell: ThreeBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                           if cell == nil {
+                               orderCheckoutTableview.register(UINib(nibName: "ThreeBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "ThreeBtnTableViewCell")
+                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                           }
+                
+                
+                return cell
             }
-            
-           
-            
-//            let qrCode = self.checkoutModel?.qrcode ?? ""
-//            let url : URL = NSURL(string: qrCode)! as URL
-//
-//
-//            // this downloads the image asynchronously if it's not cached yet
-//            cell.qrCodeImage.kf.setImage(with: url, placeholder: UIImage(named: "applogo_1024"))
-//
-            
-            return cell
-        }
     }
     
-    
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if indexPath.row == 1{

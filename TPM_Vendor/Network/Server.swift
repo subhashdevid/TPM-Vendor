@@ -40,6 +40,7 @@ class Server: NSObject, Codable { // checkpoint
     var LoginUrl = "\(mainUrl)login"
     var VerifyUrl = "\(mainUrl)verify-otp"
     var PartnerProfileUrl = "\(mainUrl)partner-profile"
+    var QrCodeAccessUrl = "\(mainUrl)mark-entry"
     var MyOrderList = "\(mainUrl)my-orders"
 
     var PartnerOrderDetails = "\(mainUrl)partner-order-details"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6J-sk-iUo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6J-sk-iUo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -747,7 +748,7 @@ TG9naW4DA
         <!--Order Detail View Controller-->
         <scene sceneID="GGP-DJ-pTb">
             <objects>
-                <viewController storyboardIdentifier="OrderDetailViewController" id="Qot-Aa-raz" customClass="OrderDetailViewController" customModule="PartyMantra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderDetailViewController" id="Qot-Aa-raz" customClass="OrderDetailViewController" customModule="TPM_Vendor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DRB-uN-ajo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -777,6 +778,47 @@ TG9naW4DA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tv-qc-Hgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439" y="1669"/>
+        </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="TJz-Lk-GUx">
+            <objects>
+                <viewController storyboardIdentifier="QRScannerViewController" id="onm-ET-Um3" customClass="QRScannerViewController" customModule="TPM_Vendor" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vlU-nB-2lX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oi9-Na-Cb7" customClass="QRScannerView" customModule="FaDriver" customModuleProvider="target">
+                                <rect key="frame" x="57" y="303" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="0L3-Yp-slG"/>
+                                    <constraint firstAttribute="width" constant="300" id="y7T-l5-IQY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owx-bK-dBQ">
+                                <rect key="frame" x="183.5" y="614" width="47" height="30"/>
+                                <state key="normal" title="FLASH"/>
+                                <connections>
+                                    <action selector="toggleTorch:" destination="onm-ET-Um3" eventType="touchUpInside" id="0a0-YD-pQ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Owx-bK-dBQ" firstAttribute="top" secondItem="oi9-Na-Cb7" secondAttribute="bottom" constant="11" id="CY8-jF-Jrk"/>
+                            <constraint firstItem="Owx-bK-dBQ" firstAttribute="centerX" secondItem="oi9-Na-Cb7" secondAttribute="centerX" id="EPc-BD-g7R"/>
+                            <constraint firstItem="oi9-Na-Cb7" firstAttribute="centerX" secondItem="g4d-VZ-sV7" secondAttribute="centerX" id="Qpm-ic-7fU"/>
+                            <constraint firstItem="oi9-Na-Cb7" firstAttribute="centerY" secondItem="g4d-VZ-sV7" secondAttribute="centerY" id="ZfH-pt-Zmo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g4d-VZ-sV7"/>
+                    </view>
+                    <connections>
+                        <outlet property="scannerView" destination="oi9-Na-Cb7" id="c9q-dH-d0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8I3-Hb-YzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219.375" y="-1300.3521126760563"/>
         </scene>
     </scenes>
     <resources>

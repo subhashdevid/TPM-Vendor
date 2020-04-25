@@ -8,11 +8,12 @@
 
 import UIKit
 
-class VendorDashboardViewController: BaseViewController {
+class VendorDashboardViewController: BaseViewController,QRCodeScannerDelegate {
     
     @IBOutlet weak var tblView: UITableView!
     
     var userModel :  ProfileModel?
+    var qrScannedCodeStr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,68 @@ class VendorDashboardViewController: BaseViewController {
         appDelegate.showLoginScreen()
     }
     
+    
+    
+    
+    
+    
+    //MARK:- QRCode Scanner
+    
+    
     @objc func didTapScanBtn() {
+      
+       let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRScannerViewController")as! QRScannerViewController
+        
+        vc.scannerDelegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
         
     }
-        @objc func didTapOrderHistoryBtn() {
-            let vc = OrdersViewController.instantiate(appStoryboard: .main) as OrdersViewController
+    
+    //MARK:- Scanner Delegate
+    
+    func qrScanningSucceededWithCode(_ str: String?) {
+        self.qrScannedCodeStr = str ?? ""
+        self.fetchMarkPassDetails(qrcodeString:  self.qrScannedCodeStr)
+    }
 
-            self.navigationController?.pushViewController(vc, animated: true)            
+    
+    
+    func createQRCodeMarkPassUrl(qrcodeString:String) -> String {
+           
+           var url = ""
+           url = Server.shared.QrCodeAccessUrl + "/\(self.qrScannedCodeStr)"
+           
+           return url
+       }
+       
+       func fetchMarkPassDetails(qrcodeString:String) {
+           Loader.showHud()
+           let param: [String: Any] = [:]
+           NetworkManager.getMarkPassOrderDetails(url: createQRCodeMarkPassUrl(qrcodeString:qrcodeString),parameters: param) {[weak self] result in
+               Loader.dismissHud()
+               switch result {
+               case let .success(response):
+                   if let checkout = response.data {
+//                       self?.orderDetailsModel = checkout
+//                       self?.orderCheckoutTableview.reloadData()
+                   }
+                   
+               case .failure: break
+               }
+           }
+       }
+       
+    
+    
+    
+    
+    
+    @objc func didTapOrderHistoryBtn() {
+        let vc = OrdersViewController.instantiate(appStoryboard: .main) as OrdersViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -60,6 +116,9 @@ class VendorDashboardViewController: BaseViewController {
     //MARK:- Profile API Call
     
     func fetchUserProfile() {
+        
+        // http://partymantra.local/api/mark-entry/{QRCODE}
+        
         let accessUserToken =  UserDefaults.standard.string(forKey: "AccessToken")
         let param: [String: Any] = [
             "token":accessUserToken ?? ""
