@@ -10,6 +10,9 @@ import UIKit
 
 class OneBtnTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btn1: UIButton!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

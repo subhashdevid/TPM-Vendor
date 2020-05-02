@@ -12,7 +12,6 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
            
     var refid: String?
     var orderDetailsModel : OrderDetailsModel?
-    
     var noBtnNeeded = 0
     
     
@@ -20,8 +19,6 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
-
-        noBtnNeeded = 2
         orderCheckoutTableview.separatorStyle = .none
         self.view.backgroundColor = .white
     }
@@ -67,6 +64,13 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        var cell: EventDetailInfoTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell") as? EventDetailInfoTableViewCell
+        if cell == nil {
+            orderCheckoutTableview.register(UINib(nibName: "EventDetailInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EventDetailInfoTableViewCell")
+            cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell") as? EventDetailInfoTableViewCell
+        }
+
+        
         if indexPath.row == 0{
             var cell: EventDetailInfoTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "EventDetailInfoTableViewCell") as? EventDetailInfoTableViewCell
             if cell == nil {
@@ -107,38 +111,141 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
             cell.configureSpecialDetail(modal: self.orderDetailsModel)
             return cell
             
-        }else{
+        }
+        else if indexPath.row == 4 {
+            var count = 0
+            var buttonAction = self.orderDetailsModel?.actions
+//            
+//            buttonAction?.mark = "yes"
+//            buttonAction?.confirm = "yes"
+//            buttonAction?.decline = "yes"
+//
+//
+            if buttonAction?.mark != "no" && buttonAction != nil {
+                count = count + 1
+            }
+            if buttonAction?.confirm != "no" && buttonAction != nil{
+                count = count + 1
+            }
+            if buttonAction?.decline != "no" && buttonAction != nil{
+                count = count + 1
+
+            }
+            
+            noBtnNeeded = count
             
             if noBtnNeeded == 1{
                 var cell: OneBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "OneBtnTableViewCell") as? OneBtnTableViewCell
-                           if cell == nil {
-                               orderCheckoutTableview.register(UINib(nibName: "OneBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "OneBtnTableViewCell")
-                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "OneBtnTableViewCell") as? OneBtnTableViewCell
-                           }
+                if cell == nil {
+                    orderCheckoutTableview.register(UINib(nibName: "OneBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "OneBtnTableViewCell")
+                    cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "OneBtnTableViewCell") as? OneBtnTableViewCell
+                }
                 
+                let buttonAction = self.orderDetailsModel?.actions
+                if buttonAction?.mark != "no" && buttonAction != nil {
+                       
+                    cell.btn1.setTitle("Mark", for: .normal)
+                    cell.btn1.tag = 101
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+                }
+                if buttonAction?.confirm != "no" && buttonAction != nil{
+                          cell.btn1.setTitle("Confirm", for: .normal)
+                    cell.btn1.tag = 102
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+
+                }
                 
+                if buttonAction?.decline != "no" && buttonAction != nil{
+                    cell.btn1.setTitle("Decline", for: .normal)
+                    cell.btn1.tag = 103
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+
+                }
+             
                 return cell
             }else if noBtnNeeded == 2{
                 var cell: TwoBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "TwoBtnTableViewCell") as? TwoBtnTableViewCell
-                           if cell == nil {
-                               orderCheckoutTableview.register(UINib(nibName: "TwoBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "TwoBtnTableViewCell")
-                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "TwoBtnTableViewCell") as? TwoBtnTableViewCell
-                           }
+                if cell == nil {
+                    orderCheckoutTableview.register(UINib(nibName: "TwoBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "TwoBtnTableViewCell")
+                    cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "TwoBtnTableViewCell") as? TwoBtnTableViewCell
+                }
                 
+                let buttonAction = self.orderDetailsModel?.actions
+                if buttonAction?.mark != "no" && buttonAction?.confirm != "no" {
+                    cell.btn1.setTitle("Mark", for: .normal)
+                    cell.btn1.tag = 101
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+                    cell.btn2.setTitle("Confirm", for: .normal)
+                    cell.btn2.tag = 102
+                    cell.btn2.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+                }
                 
-                return cell
-            }else{
-                var cell: ThreeBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
-                           if cell == nil {
-                               orderCheckoutTableview.register(UINib(nibName: "ThreeBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "ThreeBtnTableViewCell")
-                               cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
-                           }
-                
+                if buttonAction?.mark != "no" && buttonAction?.decline != "no" {
+                    cell.btn1.setTitle("Mark", for: .normal)
+                    cell.btn1.tag = 101
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+                    cell.btn2.setTitle("Decline", for: .normal)
+                    cell.btn2.tag = 103
+                    cell.btn2.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                }
+                if buttonAction?.confirm != "no" && buttonAction?.decline != "no" {
+                   
+                    cell.btn1.setTitle("Confirm", for: .normal)
+                                       cell.btn1.tag = 102
+                                       cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                                       
+                                       cell.btn2.setTitle("Decline", for: .normal)
+                                       cell.btn2.tag = 103
+                                       cell.btn2.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+                }
                 
                 return cell
             }
-    }
-    
+            else if noBtnNeeded == 3{
+                var cell: ThreeBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                if cell == nil {
+                    orderCheckoutTableview.register(UINib(nibName: "ThreeBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "ThreeBtnTableViewCell")
+                    cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                }
+                
+                    
+                    cell.btn1.setTitle("Mark", for: .normal)
+                    cell.btn1.tag = 101
+                    cell.btn1.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                    
+               
+                    cell.btn2.setTitle("Confirm", for: .normal)
+                    cell.btn2.tag = 102
+                    cell.btn2.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+
+               
+                    cell.btn3.setTitle("Decline", for: .normal)
+                    cell.btn3.tag = 103
+
+                    cell.btn3.addTarget(self, action: #selector(setButtonAction(sender:)), for: .touchUpInside)
+                
+                return cell
+            }
+            
+            else{
+                var cell: ThreeBtnTableViewCell! = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                               if cell == nil {
+                                   orderCheckoutTableview.register(UINib(nibName: "ThreeBtnTableViewCell", bundle: nil), forCellReuseIdentifier: "ThreeBtnTableViewCell")
+                                   cell = orderCheckoutTableview.dequeueReusableCell(withIdentifier: "ThreeBtnTableViewCell") as? ThreeBtnTableViewCell
+                               }
+                cell.btn3.isHidden = true
+                cell.btn2.isHidden = true
+                cell.btn1.isHidden = true
+            }
+            
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -147,10 +254,57 @@ class OrderDetailViewController: BaseViewController,UITableViewDelegate,UITableV
 //            let numberOfCell = self.checkoutModel?.packages?.count ?? 0
 //           return  (CGFloat(37*numberOfCell+20))
 //        }else{
+//        }
+        
+        
+//        if indexPath.row == 4 {
+//            var count = 0
+//            let buttonAction = self.orderDetailsModel?.actions
+//
+//            if buttonAction?.mark != "no" {
+//                count = count + 1
+//            }
+//            if buttonAction?.confirm != "no" {
+//                count = count + 1
+//            }
+//            if buttonAction?.decline != "no" {
+//                count = count + 1
+//
+//            }
+//
+//
+//            if count == 0{
+//                return 0
+//            }else{
+//                return UITableView.automaticDimension
+//            }
+//
+//        }
+//        else{
             return UITableView.automaticDimension
 //        }
     }
    
+    
+    
+    
+    @objc func setButtonAction(sender : UIButton){
+        if sender.tag == 101 {
+            print("Mark button Pressed")
+
+        }
+        else if sender.tag == 102 {
+            print("Comfirm button Pressed")
+        }
+        else if sender.tag == 103 {
+            print("Denied button Pressed")
+
+        }
+    }
+    
+    
+    
+    
     
 }
 

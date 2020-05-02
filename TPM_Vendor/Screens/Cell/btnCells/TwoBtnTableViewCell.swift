@@ -10,6 +10,9 @@ import UIKit
 
 class TwoBtnTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
