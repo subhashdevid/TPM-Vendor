@@ -74,10 +74,8 @@ class VendorDashboardViewController: BaseViewController,QRCodeScannerDelegate {
     
     
     func createQRCodeMarkPassUrl(qrcodeString:String) -> String {
-           
            var url = ""
            url = Server.shared.QrCodeAccessUrl + "/\(self.qrScannedCodeStr)"
-           
            return url
        }
        
@@ -89,6 +87,7 @@ class VendorDashboardViewController: BaseViewController,QRCodeScannerDelegate {
                switch result {
                case let .success(response):
                    if let checkout = response.data {
+                    
 //                       self?.orderDetailsModel = checkout
 //                       self?.orderCheckoutTableview.reloadData()
                    }

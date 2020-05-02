@@ -7,20 +7,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "803D05F3-602A-41A4-B64B-937B420393D7"
+            uuid = "F508F9CF-E5E7-41D5-98DA-A61521AE3914"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "fetchMarkPassDetails(qrcodeString:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "803D05F3-602A-41A4-B64B-937B420393D7 - 1f04d8271b9c0e57"
+                  uuid = "F508F9CF-E5E7-41D5-98DA-A61521AE3914 - 1f04d8271b9c0e57"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/subhashkumar/Documents/GIT_Project/TPM_Vendor/TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
                   offsetFromSymbolStart = "164">
                </Location>
                <Location
-                  uuid = "803D05F3-602A-41A4-B64B-937B420393D7 - 925b15be7a3198eb"
+                  uuid = "F508F9CF-E5E7-41D5-98DA-A61521AE3914 - 925b15be7a3198eb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/subhashkumar/Documents/GIT_Project/TPM_Vendor/TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
                   offsetFromSymbolStart = "74">
                </Location>
             </Locations>
@@ -55,32 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "29351163-3A26-47AB-9B17-F7635B0B0973"
+            uuid = "50ADBD16-A8B6-4048-B8D9-30074A8244EB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TPM_Vendor/Screens/VC/OrderDetailViewController.swift"
+            filePath = "TPM_Vendor/Screens/VC/VendorDashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "setButtonAction(sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "267399AA-D9D8-4547-8073-C9BF298DC0C3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TPM_Vendor/Screens/Cell/btnCells/ThreeBtnTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "setSelected(_:animated:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "createQRCodeMarkPassUrl(qrcodeString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
